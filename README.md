@@ -28,8 +28,8 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 - Software and Tools needed: A Virtual Machine (VM), Windows 10 identical storage image (iso) file, and Cloud servers (digital ocean).
 - VM operating system settings: 50GB of storage and 4GB of RAM.
 
-First, download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) zip file from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.
-Second, Unzip the Sysmon folder and move/copy sysmonconfig.xml into it:
+First, download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) zip file from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.<br>
+Then, unzip the Sysmon folder and move/copy sysmonconfig.xml into it:
 <p align="center"> <img src="https://i.imgur.com/DcDb5Dz.png"><br> <em>*move/copy systemconfig.xml into Sysmon folder*</em> </p>
 
 Second, open Powershell as administrator and install Sysmon64.exe using the sysmonconfig.xml file:
