@@ -32,15 +32,18 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 Then, unzip the Sysmon folder and move/copy sysmonconfig.xml into it. Next, open Powershell as administrator and install Sysmon64.exe using the sysmonconfig.xml file:
 <p align="center"> <img src="https://i.imgur.com/5oL3Ytn.png" align="center"><br> <em>Ref 1: sysmon installion using sysmonconfig.xml file</em> </p>
 
-2. Create both servers for Wazuh and TheHive using the same specifications. (using Digital Ocean as cloud provider)<br>
+2. Create both servers for Wazuh and TheHive using the same specifications using Digital Ocean cloud provider. (Save root password in a password manager)<br>
 3. Create firewall rules. Navigate to networking --> firewall and set All TCP & UDP Inbound traffic to public IP of host system.
 4. Add servers to firewall.
 <p align="center"> <img src="https://i.imgur.com/WukDKNE.jpg"><br> <em>Ref 2: servers specifications</em> </p>
 <p align="center"> <img src="https://i.imgur.com/EHQSOAX.jpg"><br> <em>Ref 3: firewall rule creation</em> </p>
 <p align="center"> <img src="https://i.imgur.com/o3o2X1u.gif"><br> <em>Ref 4: Wazuh & TheHive added to firewall</em> </p>
 
-5. Install Wazuh:
-6. Install TheHive:
+5. Install Wazuh - SSH connect to Wazuh server using PuTTy, update and upgrade system using "apt-get update && apt-get upgrade".<br> Follow [Wazuh-Install-Instructions](https://github.com/kennedyshearer/SOC-Automation-Project/blob/main/Wazuh-Install-Instructions) to finish setup.<br>
+Save username and password generated because this will be used as login to Wazuh dashboard:
+<p align="center"> <img src="https://i.imgur.com/QWaGJYG.png"><br> <em>Ref 5: username and password generated</em> </p>
+
+6. Install TheHive - SSH connect to Wazuh server using PuTTy, update and upgrade system using "apt-get update && apt-get upgrade".<br> Follow [TheHive-Install-Instruction](https://github.com/kennedyshearer/SOC-Automation-Project/blob/main/TheHive-Install-Instructions) to finish setup.
 
 
 <b>Part 3: Configuring TheHive & Wazuh Server.</b>
