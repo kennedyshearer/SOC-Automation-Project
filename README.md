@@ -28,16 +28,20 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 - Software and Tools needed: A Virtual Machine (VM), Windows 10 identical storage image (iso) file, and Cloud servers (digital ocean).
 - VM operating system settings: 50GB of storage and 4GB of RAM.
 
-First, download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) zip file from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.<br>
-Then, unzip the Sysmon folder and move/copy sysmonconfig.xml into it:
-<p align="center"> <img src="https://i.imgur.com/DcDb5Dz.png"><br> <em>*move/copy systemconfig.xml into Sysmon folder*</em> </p>
+1. Download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) zip file from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.<br>
+Then, unzip the Sysmon folder and move/copy sysmonconfig.xml into it. Next, open Powershell as administrator and install Sysmon64.exe using the sysmonconfig.xml file:
+<p align="center"> <img src="https://i.imgur.com/5oL3Ytn.png" align="center"><br> <em>Ref 1: sysmon installion using sysmonconfig.xml file</em> </p>
 
-Second, open Powershell as administrator and install Sysmon64.exe using the sysmonconfig.xml file:
-<p align="center"> <img src="https://i.imgur.com/5oL3Ytn.png" align="center"><br> <em>*sysmon installion using sysmonconfig.xml file*</em> </p>
+2. Create both servers for Wazuh and TheHive using the same specifications. (using Digital Ocean as cloud provider)<br>
+3. Create firewall rules. Navigate to networking --> firewall and set All TCP & UDP Inbound traffic to public IP of host system.
+4. Add servers to firewall.
+<p align="center"> <img src="https://i.imgur.com/WukDKNE.jpg"><br> <em>Ref 2: servers specifications</em> </p>
+<p align="center"> <img src="https://i.imgur.com/EHQSOAX.jpg"><br> <em>Ref 3: firewall rule creation</em> </p>
+<p align="center"> <img src="https://i.imgur.com/o3o2X1u.gif"><br> <em>Ref 4: Wazuh & TheHive added to firewall</em> </p>
 
-Third, create firewall:
+5. Install Wazuh:
+6. Install TheHive:
 
-Fourth, install Wazuh and TheHive (will use Digital Ocean as cloud provider):
 
 <b>Part 3: Configuring TheHive & Wazuh Server.</b>
 
