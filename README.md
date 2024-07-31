@@ -21,7 +21,7 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 
 ## Steps
 
-<b>Part 1: Create a diagram (to map out how to build lab logically).</b>
+<b>Part 1: Create a diagram (to map out how to build lab logically): [Diagram](https://github.com/kennedyshearer/SOC-Automation-Project/blob/main/automation-diagram.drawio.png) <br>
 
 <b>Part 2: Installing Windows 10 Server w/Sysmon, Wazuh Server, and TheHive Server.</b>
 
