@@ -28,7 +28,8 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 - Software and Tools needed: A Virtual Machine (VM), Windows 10 identical storage image (iso) file, and Cloud servers (digital ocean).
 - VM operating system settings: 50GB of storage and 4GB of RAM.
 
-First, download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.
+First, download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) zip file from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.
+Second, Unzip the Sysmon file: <img src="https://imgur.com/kOKee5K](https://i.imgur.com/kOKee5K.png">
 
 
 <b>Part 3: Configuring TheHive & Wazuh Server.</b>
