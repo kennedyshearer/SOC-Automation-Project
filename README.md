@@ -29,8 +29,15 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 - VM operating system settings: 50GB of storage and 4GB of RAM.
 
 First, download [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) zip file from the Microsoft site and the sysmon-modular configuration file [sysmonconfig.xml](https://github.com/olafhartong/sysmon-modular) from github.
-Second, Unzip the Sysmon file: <img src="https://imgur.com/kOKee5K](https://i.imgur.com/kOKee5K.png">
+Second, Unzip the Sysmon folder and move/copy sysmonconfig.xml into it:
+<p align="center"> <img src="https://i.imgur.com/DcDb5Dz.png"><br> <em>*move/copy systemconfig.xml into Sysmon folder*</em> </p>
 
+Second, open Powershell as administrator and install Sysmon64.exe using the sysmonconfig.xml file:
+<p align="center"> <img src="https://i.imgur.com/5oL3Ytn.png" align="center"><br> <em>*sysmon installion using sysmonconfig.xml file*</em> </p>
+
+Third, create firewall:
+
+Fourth, install Wazuh and TheHive (will use Digital Ocean as cloud provider):
 
 <b>Part 3: Configuring TheHive & Wazuh Server.</b>
 
