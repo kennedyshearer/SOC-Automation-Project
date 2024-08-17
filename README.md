@@ -91,6 +91,26 @@ Save username and password generated because this will be used as login to Wazuh
 
 ### Part 4: Generate Telemetry & Ingest into Wazuh
 
+1. To start generating Windows 10 telemetry, modify file "C:\\Programs File(x86)\ossec-agent/ossec.conf"(copy a backup). Under Log Analysis add a new <localfile> for Sysmon which PATH can be found through Event Viewer and restart Wazuh service:
+<p align="center"> <img src="https://i.imgur.com/rzMUw2a.gif" align="center"><br> <em>Ref 4.1: Find Sysmon PATH</em> </p>
+<p align="center"> <img src="https://i.imgur.com/HwO8h4L.png" align="center"><br> <em>Ref 4.1.2: Add <localefile> to ossec.conf</em> </p>
+<br>
+
+2. Setting up Wazuh dashboard to ingest mimikatz, start by adding Downloads folder to Windows Defender exclusions, downloading <a href="https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20220919">mimikatz.exe</a> and extracting it in downloads folder:
+<p align="center"> <img src="https://i.imgur.com/GdTnprT.png" align="center"><br> <em>Ref 4.2: Adding Downloads folder to exclusions</em> </p>
+
+3. Now to bypass Wazuh default configurations/rules, modify /var/ossec/etc/ossec.conf(create backup) in Wazuh-Manager-CLI to accept all logs:
+<p align="center"> <img src="https://i.imgur.com/GUQ7xHf.png" align="center"><br> <em>Ref 4.3: Modify Wazuh-Manager-CLI ossec.conf</em> </p>
+
+4. Restart Wazuh Manager, this will force Wazuh to archive all logs in /var/ossec/logs/archives. To start the ingestion process, filebeats needs to be modified in /etc/filebeat/filebeat.yml, and restarted:
+<p align="center"> <img src="https://i.imgur.com/kWfJlLi.png" align="center"><br> <em>Ref 4.4: Modify filebeat.yml</em> </p>
+<br>
+
+5. In Wazuh dashboard, create New Index by clicking Stack Management --> Index Pattern --> Create Index Pattern (name: wazuh-archives-* / time_field: timestamp)
+<p align="center"> <img src="https://i.imgur.com/J8Tdqve.gif" align="center"><br> <em>Ref 4.5: Create Index Pattern</em> </p>
+<br>
+
+6. Go to Discovery tab, select wazuh-archives-*
 
 
 *Ref 1: Network Diagram*
