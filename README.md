@@ -16,7 +16,6 @@ The SOC Automation project is aimed to create a Home-Lab with responsive capabil
 
 - Graph drawing software (draw.io) to build a logical diagram.
 - Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
 - Telemetry generation tools to create realistic network traffic and attack scenarios.
 
 ## Steps
@@ -89,5 +88,9 @@ Save username and password generated because this will be used as login to Wazuh
 9. Login to Wazuh dashboard ---> click Add Agent ---> Fill in choices:
 <p align="center"> <img src="https://i.imgur.com/UIAt5ui.png" align="center"><br> <em>Ref 3.9: Creating agent in wazuh dashboard</em> </p>
 <br> 
+
+### Part 4: Generate Telemetry & Ingest into Wazuh
+
+
 
 *Ref 1: Network Diagram*
